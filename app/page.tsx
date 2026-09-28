@@ -26,25 +26,47 @@ export default function Home() {
         <div className={`${W} relative grid items-center gap-14 lg:grid-cols-[1.15fr_.85fr]`}>
           <div>
             <Reveal><Badge>{me.role} · {me.location}</Badge></Reveal>
-            <Reveal delay={0.1}><h1 className="mt-6 font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">From AI ideas to <span className="text-primary">production-ready</span> systems.</h1></Reveal>
-            <Reveal delay={0.25}><p className="mt-6 max-w-xl text-lg text-muted-foreground">{me.summary}</p></Reveal>
+            <Reveal delay={0.1}><h1 className="mt-6 font-display text-4xl font-semibold leading-[1.05] tracking-tight md:text-7xl">From AI ideas to <span className="text-primary">production-ready</span> systems.</h1></Reveal>
+            <Reveal delay={0.25}><p className="mt-6 mr-12 md:mr-0 max-w-xl text-medium md:text-lg text-muted-foreground">{me.summary}</p></Reveal>
             <Reveal delay={0.4} className="mt-9 flex flex-wrap gap-3">
               <Button asChild><a href="#projects">See my work <ArrowUpRight className="size-4" /></a></Button>
               <Button asChild variant="outline"><a href={me.github}><Github className="size-4" />GitHub</a></Button>
               <Button asChild variant="outline"><a href={me.linkedin}><Linkedin className="size-4" />LinkedIn</a></Button></Reveal>
           </div>
-          <Reveal delay={0.3} className="relative mx-auto w-full max-w-sm">
-            <div className="float overflow-hidden rounded-[2rem] border border-border shadow-2xl shadow-primary/10">
-              <img src="/images/hero.webp" alt="Portrait of Nauman Mukhtar" className="aspect-[4/5] w-full object-cover" /></div>
+          <Reveal
+            delay={0.3}
+            className="relative mx-auto w-full max-w-sm px-4 sm:px-0"
+          >
+            {/* Profile Image */}
+            <div className="float mx-auto overflow-hidden rounded-[2rem] border border-border shadow-2xl shadow-primary/10">
+              <img
+                src="/images/hero.webp"
+                alt="Portrait of Nauman Mukhtar"
+                className="mx-auto aspect-[3/2] w-full object-cover sm:aspect-[4/5]"
+              />
+            </div>
+
+            {/* Role Badge */}
             <Reveal>
-              <div className={` float2  inline-flex w-96 mt-4 items-center rounded-lg border text-center  border-black/10 bg-white px-4 py-2.5 shadow-md shadow-black/5`}>
-                <span className="font-display w-full text-sm font-bold tracking-wider text-center text-black md:text-base">
+              <div className="float2 mx-auto mt-4 flex w-full max-w-[320px] items-center justify-center rounded-lg border border-black/10 bg-white px-4 py-2.5 text-center shadow-md shadow-black/5 sm:max-w-sm">
+                <span className="font-display text-sm font-bold tracking-wider text-black sm:text-base">
                   Full Stack AI Engineer
                 </span>
               </div>
             </Reveal>
-            <span className={`${chip} float2 -left-6 top-12`}>RAG · Agents</span>
-            <span className={`${chip} float -right-4 bottom-16`}>AWS · Kubernetes</span>
+
+            {/* Floating Skill Badges */}
+            <span
+              className={`${chip} float2 left-0 top-8 sm:-left-6 sm:top-12`}
+            >
+              RAG · Agents
+            </span>
+
+            <span
+              className={`${chip} float -right-1 bottom-20 sm:-right-4 sm:bottom-16`}
+            >
+              AWS · Kubernetes
+            </span>
           </Reveal>
 
         </div>
@@ -72,14 +94,14 @@ export default function Home() {
           <div className="font-display text-5xl font-semibold text-primary"><Counter to={s.n} suffix={s.s} /></div>
           <p className="mt-2 text-sm text-muted-foreground">{s.l}</p></CardContent></Card></Reveal>)}</section>
 
-      <section id="about" className={`${W} grid items-center gap-12 py-20 md:grid-cols-[.8fr_1.2fr]`}>
+      <section id="about" className={`${W} grid items-center gap-12 py-12 md:py-16 md:grid-cols-[.8fr_1.2fr]`}>
         <Reveal><div className="rounded-[2rem] bg-gradient-to-br from-accent/30 to-primary/20 p-6"><img src="/images/laptop.webp" alt="Nauman working on a laptop" loading="lazy" className="mx-auto w-full max-w-sm drop-shadow-2xl" /></div></Reveal>
         <Reveal delay={0.15}><h2 className={H2}>Owns systems end to end.</h2>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">From architecture and backend engineering to AI integration, infrastructure, deployment and production operations. I build reliable, maintainable systems that pair modern application architecture with LLMs, RAG and agentic workflows, backed by a strong grounding in distributed systems and cloud automation.</p>
           <p className="mt-4 text-muted-foreground">B.S. Computer Science, Lahore Garrison University, 2020–2024.</p></Reveal>
       </section>
 
-      <section id="experience" className={`${W} py-20`}>
+      <section id="experience" className={`${W} py-12 md:py-16`}>
         <Reveal><h2 className={H2}>Where I've worked</h2></Reveal>
         <div className="mt-12 space-y-6 border-l border-border pl-6 md:pl-10">{jobs.map((j, i) => (
           <Reveal key={j.org} delay={i * 0.05}><div className="relative"><span className="absolute -left-[31px] top-7 size-3 rounded-full bg-primary ring-4 ring-background md:-left-[47px]" />
@@ -88,12 +110,12 @@ export default function Home() {
               <ul className="mt-4 list-disc space-y-2 pl-5 text-muted-foreground">{j.points.map(p => <li key={p}>{p}</li>)}</ul></CardContent></Card></div></Reveal>))}</div>
       </section>
 
-      <section id="projects" className={`${W} py-20`}>
+      <section id="projects" className={`${W} py-12 md:py-16`}>
         <Reveal><h2 className={H2}>Recent projects</h2><p className="mt-3 text-muted-foreground">Click any screenshot to open it full size.</p></Reveal>
         <Reveal delay={0.1} className="mt-10"><Slider items={slides} /></Reveal>
       </section>
 
-      <section id="skills" className={`${W} py-20`}>
+      <section id="skills" className={`${W} py-12 md:py-16`}>
         <Reveal><h2 className={H2}>Toolbox</h2></Reveal>
         <div className="mt-10 grid gap-4 md:grid-cols-2">{Object.entries(skills).map(([g, l], i) => (
           <Reveal key={g} delay={i * 0.06}><Card className="h-full"><CardContent>
@@ -101,8 +123,8 @@ export default function Home() {
             <div className="mt-4 flex flex-wrap gap-2">{l.map(s => <Badge key={s} className="transition hover:border-primary hover:text-foreground">{s}</Badge>)}</div></CardContent></Card></Reveal>))}</div>
       </section>
 
-      <section id="contact" className={`${W} py-10`}>
-        <Reveal><img src="/images/banner.webp" alt="Nauman Mukhtar: Full Stack Development, AI Agents, Cloud Native" loading="lazy" className="w-full rounded-3xl border border-border h-35 md:h-auto" /></Reveal>
+      <section id="contact" className={`${W} pt-0! py-10 md:py-10 md:pt-2`}>
+        <Reveal><img src="/images/banner.webp" alt="Nauman Mukhtar: Full Stack Development, AI Agents, Cloud Native" loading="lazy" className="hidden md:flex w-full rounded-3xl border border-border h-35 md:h-auto" /></Reveal>
         <div className="mt-14 grid gap-12 md:grid-cols-2">
           <Reveal><h2 className={H2}>Let's build, scale and innovate.</h2>
             <p className="mt-5 max-w-md text-lg text-muted-foreground">Have a product that needs AI, or a system that needs to scale? Send a note and I'll reply by email.</p>

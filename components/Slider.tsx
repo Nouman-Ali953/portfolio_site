@@ -54,9 +54,9 @@ export default function Slider({ items }: { items: typeof slides }) {
           <h3 className="mt-3 font-display text-2xl font-semibold">
             {cur.title}
           </h3>
-          <p className="mt-2 max-w-2xl text-muted-foreground">{cur.desc}</p>
+          <p className="mt-2 w-85 md:max-w-2xl md:w-full text-muted-foreground">{cur.desc}</p>
         </div>
-        <div className="flex shrink-0 gap-2">
+        <div className="hidden md:flex shrink-0 gap-2">
           <Button
             size="icon"
             variant="outline"
