@@ -38,11 +38,11 @@ export default function Home() {
             className="relative mx-auto w-full max-w-sm px-4 sm:px-0"
           >
             {/* Profile Image */}
-            <div className="float mx-auto overflow-hidden rounded-[2rem] border border-border shadow-2xl shadow-primary/10">
+            <div className="float mx-auto overflow-hidden rounded-full md:rounded-[2rem] border border-border shadow-2xl shadow-primary/10">
               <img
                 src="/images/hero.webp"
                 alt="Portrait of Nauman Mukhtar"
-                className="mx-auto aspect-[3/2] w-full object-cover sm:aspect-[4/5]"
+                className="mx-auto aspect-[3/3] w-full object-cover sm:aspect-[4/5]"
               />
             </div>
 
