@@ -101,8 +101,8 @@ export default function Home() {
             <div className="mt-4 flex flex-wrap gap-2">{l.map(s => <Badge key={s} className="transition hover:border-primary hover:text-foreground">{s}</Badge>)}</div></CardContent></Card></Reveal>))}</div>
       </section>
 
-      <section id="contact" className={`${W} py-20`}>
-        <Reveal><img src="/images/banner.webp" alt="Nauman Mukhtar: Full Stack Development, AI Agents, Cloud Native" loading="lazy" className="w-full rounded-3xl border border-border" /></Reveal>
+      <section id="contact" className={`${W} py-10`}>
+        <Reveal><img src="/images/banner.webp" alt="Nauman Mukhtar: Full Stack Development, AI Agents, Cloud Native" loading="lazy" className="w-full rounded-3xl border border-border h-35 md:h-auto" /></Reveal>
         <div className="mt-14 grid gap-12 md:grid-cols-2">
           <Reveal><h2 className={H2}>Let's build, scale and innovate.</h2>
             <p className="mt-5 max-w-md text-lg text-muted-foreground">Have a product that needs AI, or a system that needs to scale? Send a note and I'll reply by email.</p>
