@@ -10,9 +10,10 @@ export const me = {
 };
 export const jobs = [
   {
-    when: "Mar 2024 – Present",
+    when: "Sep 2025 – Present",
     role: "Full Stack AI Engineer",
-    org: "ShopeX",
+    org: "Technove",
+    loc: "Melbourne, Australia (Remote)",
     points: [
       "Design and deliver AI-powered and full-stack applications across RAG, multi-agent AI and business apps, supporting 5+ specialized AI workflows.",
       "Built a real-time AI surveillance system linking edge devices to a central platform: 17 detection classes, 30-second device health polling.",
@@ -21,9 +22,10 @@ export const jobs = [
     ],
   },
   {
-    when: "Jan 2023 – Feb 2024",
+    when: "Aug 2024 – Sep 2025",
     role: "Full Stack Developer",
     org: "Bytibits",
+    loc: "Lahore, Pakistan",
     points: [
       "Enhanced Next.js and NestJS applications, improving scalability and performance by 35%.",
       "Built NestJS APIs, business logic, authentication and database integrations alongside existing systems.",
@@ -31,9 +33,10 @@ export const jobs = [
     ],
   },
   {
-    when: "Mar 2022 – Jan 2023",
+    when: "Nov 2022 – Jul 2024",
     role: "MERN Stack Developer",
     org: "Codezbit",
+    loc: "Lahore, Pakistan",
     points: [
       "Designed REST APIs with Node.js and Express.js, improving data transfer performance by 25%.",
       "Implemented secure MongoDB CRUD workflows, reducing data-related issues by 30%.",

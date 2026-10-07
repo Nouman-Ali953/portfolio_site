@@ -98,16 +98,23 @@ export default function Home() {
         <Reveal><div className="rounded-[2rem] bg-gradient-to-br from-accent/30 to-primary/20 p-6"><img src="/images/laptop.webp" alt="Nauman working on a laptop" loading="lazy" className="mx-auto w-full max-w-sm drop-shadow-2xl" /></div></Reveal>
         <Reveal delay={0.15}><h2 className={H2}>Owns systems end to end.</h2>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">From architecture and backend engineering to AI integration, infrastructure, deployment and production operations. I build reliable, maintainable systems that pair modern application architecture with LLMs, RAG and agentic workflows, backed by a strong grounding in distributed systems and cloud automation.</p>
-          <p className="mt-4 text-muted-foreground">B.S. Computer Science, Lahore Garrison University, 2020–2024.</p></Reveal>
+          <p className="mt-4 text-white italic">B.S. Computer Science, Lahore Garrison University, 2020–2024.</p></Reveal>
       </section>
 
       <section id="experience" className={`${W} py-12 md:py-16`}>
         <Reveal><h2 className={H2}>Where I've worked</h2></Reveal>
         <div className="mt-12 space-y-6 border-l border-border pl-6 md:pl-10">{jobs.map((j, i) => (
           <Reveal key={j.org} delay={i * 0.05}><div className="relative"><span className="absolute -left-[31px] top-7 size-3 rounded-full bg-primary ring-4 ring-background md:-left-[47px]" />
-            <Card className="transition hover:border-accent"><CardContent>
-              <div className="flex flex-wrap items-baseline justify-between gap-2"><h3 className="font-display text-xl font-semibold">{j.role} <span className="text-accent">@ {j.org}</span></h3><span className="text-sm text-primary">{j.when}</span></div>
-              <ul className="mt-4 list-disc space-y-2 pl-5 text-muted-foreground">{j.points.map(p => <li key={p}>{p}</li>)}</ul></CardContent></Card></div></Reveal>))}</div>
+            <Card className="transition hover:border-accent pb-2"><CardContent>
+              <div className="flex flex-wrap items-baseline justify-between gap-2"><h3 className="font-display text-xl font-semibold">{j.role} <span className="text-accent">@ {j.org}</span></h3>
+                <span className="text-sm text-white">{j.when}</span>
+
+              </div>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-muted-foreground">{j.points.map(p => <li key={p}>{p}</li>)}</ul></CardContent>
+      <span className="absolute bottom-2 right-6 text-sm text-primary italic">{j.loc}</span>
+              </Card></div>
+              
+              </Reveal>))}</div>
       </section>
 
       <section id="projects" className={`${W} py-12 md:py-16`}>
