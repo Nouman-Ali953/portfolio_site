@@ -1,4 +1,13 @@
-import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Globe,
+  ArrowUp,
+} from "lucide-react";
 import Network from "@/components/Network";
 import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
@@ -139,6 +148,89 @@ export default function Home() {
           <Reveal delay={0.15}><Card><CardContent className="p-8"><ContactForm /></CardContent></Card></Reveal></div>
       </section>
     </main>
-    <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">© {new Date().getFullYear()}</footer>
+    
+<footer className="border-t border-border bg-background">
+  <div className="mx-auto max-w-6xl px-6 py-10">
+    <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+      {/* Branding */}
+      <div className="hidden md:space-y-2">
+       
+       
+      </div>
+
+      {/* Social Links */}
+      <div className="flex items-center justify-center gap-3">
+        <a
+          href="https://github.com/Nouman-Ali953"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          className="rounded-full border border-border p-2.5 text-muted-foreground transition-colors hover:border-foreground hover:text-foreground"
+        >
+          <Github className="h-5 w-5" />
+        </a>
+
+        <a
+          href="https://linkedin.com/in/nauman-cs"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          className="rounded-full border border-border p-2.5 text-muted-foreground transition-colors hover:border-foreground hover:text-foreground"
+        >
+          <Linkedin className="h-5 w-5" />
+        </a>
+
+        <a
+          href="mailto:nauman.mukhtar.cs@gmail.com"
+          aria-label="Email"
+          className="rounded-full border border-border p-2.5 text-muted-foreground transition-colors hover:border-foreground hover:text-foreground"
+        >
+          <Mail className="h-5 w-5" />
+        </a>
+      </div>
+    </div>
+
+    <div className="my-7 border-t border-border" />
+
+    {/* Contact Information */}
+    <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground md:justify-start">
+      <span className="flex items-center gap-2">
+        <MapPin className="h-4 w-4" />
+        Lahore, Pakistan
+      </span>
+
+      <a
+        href="tel:+923091428766"
+        className="flex items-center gap-2 transition-colors hover:text-foreground"
+      >
+        <Phone className="h-4 w-4" />
+        +92 309 1428766
+      </a>
+
+      <a
+        href="mailto:nauman.mukhtar.cs@gmail.com"
+        className="flex items-center gap-2 transition-colors hover:text-foreground"
+      >
+        <Mail className="h-4 w-4" />
+        nauman.mukhtar.cs@gmail.com
+      </a>
+
+    </div>
+
+    <div className="mt-7 flex flex-col items-center justify-between gap-3 text-xs text-muted-foreground sm:flex-row">
+      <p>
+        © {new Date().getFullYear()} Nauman Mukhtar. All rights reserved.
+      </p>
+
+      <a
+        href="#home"
+        className="hidden md:flex items-center gap-1 transition-colors hover:text-foreground"
+      >
+        Back to top <ArrowUp className="h-3.5 w-3.5" />
+      </a>
+    </div>
+  </div>
+</footer>
+
   </>);
 }
